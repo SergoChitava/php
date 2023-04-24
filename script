@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# navigate to your Laravel project directory
+cd /App
+
+composer update 
+
+# generate a new key for Laravel
+php artisan key:generate
+
+# start the Laravel development server on host 10.255.0.184
+php artisan serve --host=0.0.0.0 
