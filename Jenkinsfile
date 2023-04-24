@@ -1,10 +1,19 @@
-/* Requires the Docker Pipeline plugin */
 pipeline {
-    agent { docker { image 'php:8.1.11-alpine' } }
+    agent any
     stages {
-        stage('build') {
+        stage("Build") {
             steps {
-                sh 'php --version'
+                echo "Building the app..."
+            }
+        }
+        stage("Test") {
+            steps {
+                echo "Testing the app..."
+            }
+        }
+        stage("Deploy") {
+            steps {
+                echo "Deploying the app..."
             }
         }
     }
